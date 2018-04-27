@@ -18,6 +18,23 @@ def busca_menor(array)
   menor_indice
 end
 
-array_teste = [1, 2, 3, 4, 5, 6]
 
-busca_menor(array_teste)
+def ordenar_por_selecao(array)
+  novoArray = []
+
+  array.size.times do
+    menor = busca_menor(array)
+    
+    #puts array.pop
+
+    #novoArray.push(array.pop { |i| i == array[menor]})
+  end
+
+  print novoArray.flatten
+end
+
+array_teste = [5, 4, 1, 8, 2, 3, 6]
+
+# busca_menor(array_teste)
+
+ordenar_por_selecao(array_teste)
