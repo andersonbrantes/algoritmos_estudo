@@ -25,16 +25,14 @@ def ordenar_por_selecao(array)
   array.size.times do
     menor = busca_menor(array)
     
-    #puts array.pop
+    item_removido = array.delete_at(menor)
 
-    #novoArray.push(array.pop { |i| i == array[menor]})
+    novoArray.push(item_removido)
   end
 
-  print novoArray.flatten
+  novoArray
 end
 
 array_teste = [5, 4, 1, 8, 2, 3, 6]
 
-# busca_menor(array_teste)
-
-ordenar_por_selecao(array_teste)
+print ordenar_por_selecao(array_teste)
