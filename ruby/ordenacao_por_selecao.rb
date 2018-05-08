@@ -3,16 +3,11 @@ def busca_menor(array)
   menor_indice = 0
 
   (1..array.size).each_with_index do |item, index|
-    # next unless array[index] < menor
     
-    # menor = array[index]
-    # menor_indice = index
-
-
-    if array[index] < menor
-      menor = array[index]
-      menor_indice = index
-    end
+    next unless array[index] < menor
+    
+    menor = array[index]
+    menor_indice = index
   end
 
   menor_indice
